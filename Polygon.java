@@ -26,6 +26,12 @@ public class Polygon extends Shape {
     for (int i = 0; i < xs.length(); i = i + 1) {
       pairs = pairs + "(" + xs.get(i) + ", " + ys.get(i) + ")";
     }
-    System.out.println(pairs);
+    return pairs;
+  }
+  public int[] getXCoords() {
+    return xs.underlying;
+  }
+  public int[] getYCoords() {
+    return ys.underlying;
   }
 }
