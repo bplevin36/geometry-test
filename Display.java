@@ -20,10 +20,13 @@ public class Display extends JFrame{
     public void paint(Graphics g){
         for(Shape s : shapes){
             if(s instanceof Circle){
+                g.setColor(new Color(255, 0, 0, 150));
                 g.fillOval(s.left(), s.top(), s.right()-s.left(), s.bottom()-s.top());
             }else if(s instanceof Rectangle){
+                g.setColor(new Color(0, 255, 0, 150));
                 g.fillRect(s.left(), s.top(), s.right()-s.left(), s.bottom()-s.top());
             }else if(s instanceof Polygon){
+                g.setColor(new Color(150, 0, 150, 150));
                 g.fillPolygon(((Polygon)s).getXCoords(), ((Polygon)s).getYCoords(), ((Polygon)s).getXCoords().length);
             }
         }
